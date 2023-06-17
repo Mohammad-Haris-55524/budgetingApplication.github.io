@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <script src="https://kit.fontawesome.com/4e37c36b01.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <style>
+    #visiblity {
+      height: 30px;
+      text-align: start;
+      font-size: 1.1em;
+      margin-left: 12px;
+      margin-top: 10px;
+      padding: 2px;
+      width: fit-content;
+      color: darkred;
+      font-weight: 300;
+    }
+  </style>
+  <body>
+    <script src="./code.js" defer></script>
+
+    <div id="Budgeting-Application">
+      <div id="container-1">
+        <!-- Budget form -->
+        <div class="BudgetForm">
+          <form id="budget-form">
+            <h4>Please Enter Your Budget Amount </h4>
+            <input type="number" id="budget" placeholder="Budget Amount" />
+            <div class="button_budget">
+              <input type="button" id="button_Budgeet" value="Set Budget" />
+            </div>
+            <p id="visiblity" class="visiblityIf"></p>
+          </form>
+        </div>
+
+        <div id="box2">
+          <div class="row-2">
+            <h3>BUDGET</h3>
+            <img src="./Images/budget-image.png" alt="budget-image" />
+            <h3 id="output-1">Rs: 00</h3>
+          </div>
+
+          <div class="row-2">
+            <h3>EXPENSES</h3>
+            <img src="./Images/expense-image.png" alt="expense-image" />
+            <h3 id="output-2">RS: 00</h3>
+          </div>
+
+          <div class="row-2">
+            <h3>BALANCE</h3>
+            <img src="./Images/ruppe-image.png" alt="ruppes-image" />
+            <h3 id="output-3">RS: 00</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expense form -->
+
+      <div id="container-2">
+        <div id="addExpenseForm">
+          <form id="add_expense_form">
+            <div class="Amount">
+              <h4 class="margin">Enter your Expense Amount</h4>
+              <input
+                type="number"
+                id="amountOfItem"
+                placeholder="Expense Amount"
+              />
+
+              <!-- <h4 class="margin">Exclusive Tax</h4>
+                <input type="number" id="exclusive_Tax">
+             
+                <h4>Amount Tax</h4>
+                 <input type="number" id="amount_Tax"> -->
+            </div>
+
+            <div class="Discription">
+              <h4 class="margin">Enter your Expense Details</h4>
+              <input
+                type="text"
+                id="itemDetail"
+                placeholder="Expense Details"
+              />
+            </div>
+
+            <div class="DueDate">
+              <h4 class="margin">Due Date</h4>
+              <input type="date" id="due_date" />
+            </div>
+
+            <div class="Recurring">
+              <h4 class="margin">Recurring?</h4>
+              <select id="recurring">
+                <option value="yes">yes</option>
+                <option value="no" selected>No</option>
+              </select>
+            </div>
+
+            <div class="PaymentDate">
+              <h4 class="margin">Payment Date</h4>
+              <input type="date" id="payment_Date" />
+            </div>
+
+            <div id="submit-expense">
+              <input
+                type="button"
+                id="add_expense_details"
+                value="Add Expense"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="listOfExpenses" id="tableContainer"></div>
+
+        <!-- <div id="listOfExpenses"> 
+          <h4 class="style" id="Exp_Amt">Expense Amount</h4>
+          <h4 class="style" id="Exp_Dis">Expense Detail</h4>
+          <h4 class="style" id="Due_Dates">Due Date</h4>
+          <h4 class="style" id="Pay_Dates">Payment Date</h4> 
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
